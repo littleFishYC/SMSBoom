@@ -4,7 +4,7 @@ name: 🚀 Run SMSBoom in Action
 on: 
   # 定时触发 参考 https://docs.github.com/cn/actions/using-workflows/events-that-trigger-workflows#schedule
   schedule:
-      - cron: '0 7,13,19 * * *'
+      - cron: '0 1,9 * * *'
   # 手动触发
   workflow_dispatch:
 
@@ -25,4 +25,4 @@ jobs:
         # 此处可以自定义命令行运行参数.替换手机号
         run: |
           pip3 install -r requirements.txt
-          python3 smsboom.py run -t 32 -p ${{ secrets.NUMBER1 }} -p ${{ secrets.NUMBER2 }} -f 60 -i 60 -e
+          python3 smsboom.py run -t 32 -p ${{ secrets.NUMBER1 }} -p ${{ secrets.NUMBER2 }} -f 30 -i 60 -e
